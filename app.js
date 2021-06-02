@@ -17,6 +17,103 @@ let hours = ['6', '7', '8', '9', '10', '11', '12', '1', '2', '3', '4', '5', '6',
 
 
 
+
+
+
+
+
+
+
+
+function Header (){}
+
+Header.prototype.renderH = function(){
+
+
+        
+
+    let initialRow = document.createElement('tr')
+    tableOne.appendChild(initialRow);
+    let thI = document.createElement('th');
+    initialRow.appendChild(thI);
+    thI.textContent = 'Hours';
+
+    for(let i = 0; i < hours.length; i++){
+        let th111 = document.createElement('th');
+        initialRow.appendChild(th111);
+        th111.textContent = hours[i]
+    }
+    let tdaily1 = document.createElement('th');
+    initialRow.appendChild(tdaily1);
+    tdaily1.textContent = "Daily Total"
+}
+
+
+
+// function Footer(maxNo, minNo,avgNo,){
+//     this.maxNo = maxNo;
+//     this.minNo = minNo;
+//     this.avgNo = avgNo;
+//     this.numberOfCustomersPerHour = [];
+//     this.numberOfCookiesPerHour = [];
+//     this.total = 0;
+//     this.sum = 0;
+    
+//     arrOfObject.push(this)
+//     // console.log(this)
+// }
+
+
+        
+//     Footer.prototype.updateNumberOfCustomersPerHour = function(){
+//         for(let i = 0; i< hours.length;i++){
+       
+//                 this.numberOfCustomersPerHour.push(randomValue(this.minNo,this.maxNo));
+//                 // console.log(this.numberOfCustomersPerHour)
+//     }
+//         }
+//         Footer.prototype.updateNumberOfCookiesPerHour = function(){
+//             for(let i = 0 ; i < hours.length; i++){
+//                  this.numberOfCookiesPerHour.push(this.numberOfCustomersPerHour[i] * Math.ceil(this.avgNo));
+//                 //  console.log(this.numberOfCookiesPerHour)
+//                 this.total = this.total + this.numberOfCookiesPerHour[i];
+//                     }
+//         }
+
+//         Location.prototype.renderFooter = function(){
+
+//             let lastRow = document.createElement('tr')
+//             tableOne.appendChild(lastRow);
+//             let dLast = document.createElement('td');
+//             lastRow.appendChild(dLast);
+//             dLast.textContent = 'Totals';
+        
+//             for(let i = 0; i < hours.length; i++){
+//                 for(let j =0; j < 5 ; j++){
+//                   this.sumA += arrOfObject[j].numberOfCookiesPerHour[j]
+//                     let d2 = document.createElement('td');
+//                     lastRow.appendChild(d2);
+//                     d2.textContent = this.sumA[i]
+//                 }
+                
+//             }
+//             let d3 = document.createElement('th');
+//             lastRow.appendChild(d3);
+//             d3.textContent = "Total of totals"
+//         }
+
+
+
+
+
+
+
+
+
+
+
+
+
 function Location (maxNo, minNo,avgNo,){
     this.maxNo = maxNo;
     this.minNo = minNo;
@@ -25,9 +122,16 @@ function Location (maxNo, minNo,avgNo,){
     this.numberOfCookiesPerHour = [];
     this.total = 0;
     this.updateHours = [];
+    
     arrOfObject.push(this)
     // console.log(this)
 }
+
+
+
+
+
+
 
     Location.prototype.updateNumberOfCustomersPerHour = function(){
     for(let i = 0; i< hours.length;i++){
@@ -45,33 +149,9 @@ function Location (maxNo, minNo,avgNo,){
     }
 
 
-
-
-
-    Location.prototype.renderH = function(){
-
-
-        
-
-        let initialRow = document.createElement('tr')
-        tableOne.appendChild(initialRow);
-        let thI = document.createElement('th');
-        initialRow.appendChild(thI);
-        thI.textContent = 'Hours';
-
-        for(let i = 0; i < hours.length; i++){
-            let th111 = document.createElement('th');
-            initialRow.appendChild(th111);
-            th111.textContent = `${this.updateHours[i]}`;
-        }
-        let tdaily1 = document.createElement('td');
-        initialRow.appendChild(tdaily1);
-        tdaily1.textContent = "Daily Total"
-}
-
-
-
-
+    
+    
+    
 
 
 
@@ -204,6 +284,26 @@ Location.prototype.renderL = function(){
     let lima = new Location(16,2,4.6);
 
 
+
+
+
+
+
+
+
+    
+
+   
+
+
+
+
+
+
+
+let time = new Header();
+
+   
     seattle.updateNumberOfCustomersPerHour();
     seattle.updateNumberOfCookiesPerHour();
     tokyo.updateNumberOfCustomersPerHour();
@@ -212,20 +312,26 @@ Location.prototype.renderL = function(){
     paris.updateNumberOfCookiesPerHour();
     lima.updateNumberOfCustomersPerHour()
     lima.updateNumberOfCookiesPerHour();
-    seattle.renderH();
+    
     
 
-
+    time.renderH();
     seattle.renderS();
     tokyo.renderT();
     tokyo.renderD();
     paris.renderP();
     lima.renderL();
-    
+
+    //   seattle.renderFooter();
+   
     
 
 
-console.log(arrOfObject);
+
+
+
+
+// console.log(arrOfObject);
 
 
 
