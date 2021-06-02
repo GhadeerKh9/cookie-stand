@@ -1,4 +1,3 @@
-
 'use strict'
 
 function randomValue(min, max) {
@@ -15,6 +14,7 @@ globalVar.appendChild(tableOne)
 let arrOfObject = [];
 let hours = ['6', '7', '8', '9', '10', '11', '12', '1', '2', '3', '4', '5', '6', '7']
 
+<<<<<<< HEAD
 
 
 
@@ -114,6 +114,8 @@ Header.prototype.renderH = function(){
 
 
 
+=======
+>>>>>>> 9d31f1f1185c4c486bf29ad153cf280a46884464
 function Location (maxNo, minNo,avgNo,){
     this.maxNo = maxNo;
     this.minNo = minNo;
@@ -327,6 +329,7 @@ let time = new Header();
     
 
 
+<<<<<<< HEAD
 
 
 
@@ -340,3 +343,6 @@ let time = new Header();
 
 
 
+=======
+console.log(arrOfObject);
+>>>>>>> 9d31f1f1185c4c486bf29ad153cf280a46884464
