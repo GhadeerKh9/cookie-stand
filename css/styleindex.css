@@ -1,0 +1,27 @@
+.Seattle {
+    background-color: blanchedalmond;
+}
+.Tokyo{
+    background-color: salmon
+}
+.Dubai {
+    background-color: rgb(212, 238, 223);
+}
+.Lima{
+    background-color: rgb(185, 178, 224);
+}
+
+.Paris {
+    background: rgb(94, 87, 86);
+}
+header {
+    background-color: thistle;
+    padding:  20px;
+}
+.inline {
+    display: inline-block;
+}
+footer{
+    padding: 20px;
+    background-color: thistle;
+}
