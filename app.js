@@ -1,67 +1,264 @@
 function randomValue(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
-let globVar = document.getElementById('cookies');
-let hours = ['6', '7', '8', '9', '10', '11', '12', '1', '2', '3', '4', '5', '6', '7']
+let globalVar = document.getElementById('cookies');
+
+
+let arrOfObject = [];
+let hours = ['6 am', '7 am', '8 am', '9 am', '10 am', '11 am', '12 am', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', '7 pm']
 
 
 const Seattle = {
-max: 65,
-min: 23,
-Avg: 6.3,
+cityName: "Seattle",   
+maxNo: 65,
+minNo: 23,
+avgNo: 6.3,
 numberOfCookiesPerHour: [],
 numberOfCustomersPerHour: [],
+total: 0,
 updatingNumberOfCustomersPerHour: function(){
+
+    for(let i = 0; i< hours.length;i++){
+   
+        this.numberOfCustomersPerHour.push(randomValue(this.minNo,this.maxNo));
+        console.log(this.numberOfCustomersPerHour)
+}
+
+},
+
+
+
+updateNumberOfCookiesPerHour: function(){
+    for(let i = 0 ; i < hours.length; i++){
+         this.numberOfCookiesPerHour.push(this.numberOfCustomersPerHour[i] * Math.ceil(this.avgNo));
+         console.log(this.numberOfCookiesPerHour)
+        this.total = this.total + this.numberOfCookiesPerHour[i];
+      
+            }
+},
+
+render: function(){
+    let cityName= document.createElement('h2');
+    globalVar.appendChild(cityName);
+    cityName.textContent = this.cityName;
+
+
+    let containingList= document.createElement('ul');
+    globalVar.appendChild(containingList);
+
+    for(let i = 0; i<hours.length; i++){
+        let elementList = document.createElement('li');
+        containingList.appendChild(elementList);
+        elementList.textContent= `${hours[i]}       :      ${this.numberOfCookiesPerHour[i]} cookies`
+    }
+
+    let totalPerDay = document.createElement('li');
+    containingList.appendChild(totalPerDay);
+    totalPerDay.textContent = `Daily Total :  ${this.total}`;
+
+
+
+}
+
+
+}
+
+
+Seattle.updatingNumberOfCustomersPerHour();
+Seattle.updateNumberOfCookiesPerHour();
+Seattle.render();
+
+
+const Tokyo = {
+cityName: "Tokyo",   
+maxNo: 24,
+minNo: 3,
+avgNo: 1.2,
+numberOfCookiesPerHour: [],
+numberOfCustomersPerHour: [],
+total: 0,
+updatingNumberOfCustomersPerHour: function(){
+
+    for(let i = 0; i< hours.length;i++){
+   
+        this.numberOfCustomersPerHour.push(randomValue(this.minNo,this.maxNo));
+        console.log(this.numberOfCustomersPerHour)
+}
+
+},
+
+
+
+updateNumberOfCookiesPerHour: function(){
+    for(let i = 0 ; i < hours.length; i++){
+         this.numberOfCookiesPerHour.push(this.numberOfCustomersPerHour[i] * Math.ceil(this.avgNo));
+         console.log(this.numberOfCookiesPerHour)
+        this.total = this.total + this.numberOfCookiesPerHour[i];
+      
+            }
+},
+
+render: function(){
+    let cityName= document.createElement('h2');
+    globalVar.appendChild(cityName);
+    cityName.textContent = this.cityName;
+
+
+    let containingList= document.createElement('ul');
+    globalVar.appendChild(containingList);
+
+    for(let i = 0; i<hours.length; i++){
+        let elementList = document.createElement('li');
+        containingList.appendChild(elementList);
+        elementList.textContent= `${hours[i]}       :      ${this.numberOfCookiesPerHour[i]} cookies`
+    }
+
+    let totalPerDay = document.createElement('li');
+    containingList.appendChild(totalPerDay);
+    totalPerDay.textContent = `Daily Total :  ${this.total}`;
+
+
+
+}
+
+
+}
+
+
+
+Tokyo.updatingNumberOfCustomersPerHour();
+Tokyo.updateNumberOfCookiesPerHour();
+Tokyo.render();
+
+
+
+
+const Dubai = {
+cityName: "Dubai",   
+maxNo: 38,
+minNo: 11,
+avgNo: 3.7,
+numberOfCookiesPerHour: [],
+numberOfCustomersPerHour: [],
+total: 0,
+updatingNumberOfCustomersPerHour: function(){
+
+    for(let i = 0; i< hours.length;i++){
+   
+        this.numberOfCustomersPerHour.push(randomValue(this.minNo,this.maxNo));
+        console.log(this.numberOfCustomersPerHour)
+}
+
+},
+
+
+
+updateNumberOfCookiesPerHour: function(){
+    for(let i = 0 ; i < hours.length; i++){
+         this.numberOfCookiesPerHour.push(this.numberOfCustomersPerHour[i] * Math.ceil(this.avgNo));
+         console.log(this.numberOfCookiesPerHour)
+        this.total = this.total + this.numberOfCookiesPerHour[i];
+      
+            }
+},
+
+render: function(){
+    let cityName= document.createElement('h2');
+    globalVar.appendChild(cityName);
+    cityName.textContent = this.cityName;
+
+
+    let containingList= document.createElement('ul');
+    globalVar.appendChild(containingList);
+
+    for(let i = 0; i<hours.length; i++){
+        let elementList = document.createElement('li');
+        containingList.appendChild(elementList);
+        elementList.textContent= `${hours[i]}       :      ${this.numberOfCookiesPerHour[i]} cookies`
+    }
+
+    let totalPerDay = document.createElement('li');
+    containingList.appendChild(totalPerDay);
+    totalPerDay.textContent = `Daily Total :  ${this.total}`;
+
+
+
+}
+
+
+}
+
+
+Dubai.updatingNumberOfCustomersPerHour();
+Dubai.updateNumberOfCookiesPerHour();
+Dubai.render();
+
+
+
+
+
+
+const Paris = {
+    cityName: "Paris",   
+    maxNo: 38,
+    minNo: 20,
+    avgNo: 2.3,
+    numberOfCookiesPerHour: [],
+    numberOfCustomersPerHour: [],
+    total: 0,
+    updatingNumberOfCustomersPerHour: function(){
     
-    for (i = 0; i < hours.length; i++){
-        console.log(randomValue(3,12));
-        i+1
+        for(let i = 0; i< hours.length;i++){
+       
+            this.numberOfCustomersPerHour.push(randomValue(this.minNo,this.maxNo));
+            console.log(this.numberOfCustomersPerHour)
     }
-    this.numberOfCustomersPerHour = randomValue(3,12);
-    console.log(this.numberOfCustomersPerHour);
-},
-
-updatingNumberOfCookiesPerHour: function(){
-    for(i =0; i< hours.length; i++){
-        let cookies = randomValue(3,12)*6.2
-        console.log(cookies)
-        i+1
+    
+    },
+    
+    
+    
+    updateNumberOfCookiesPerHour: function(){
+        for(let i = 0 ; i < hours.length; i++){
+             this.numberOfCookiesPerHour.push(this.numberOfCustomersPerHour[i] * Math.ceil(this.avgNo));
+             console.log(this.numberOfCookiesPerHour)
+            this.total = this.total + this.numberOfCookiesPerHour[i];
+          
+                }
+    },
+    
+    render: function(){
+        let cityName= document.createElement('h2');
+        globalVar.appendChild(cityName);
+        cityName.textContent = this.cityName;
+    
+    
+        let containingList= document.createElement('ul');
+        globalVar.appendChild(containingList);
+    
+        for(let i = 0; i<hours.length; i++){
+            let elementList = document.createElement('li');
+            containingList.appendChild(elementList);
+            elementList.textContent= `${hours[i]}       :      ${this.numberOfCookiesPerHour[i]} cookies`
+        }
+    
+        let totalPerDay = document.createElement('li');
+        containingList.appendChild(totalPerDay);
+        totalPerDay.textContent = `Daily Total :  ${this.total}`;
+    
+    
+    
     }
-},
-
-render:function (){
-    let articleElement = document.createElement('article');
-   
-    globVar.appendChild(articleElement);
-   
-
-    let ulElement = document.createElement('ul');
-    articleElement.appendChild(ulElement);
-    let liElement = null;
-    for(let i = 0 ; i < this.likes.length ; i++){
-    liElement = document.createElement('li');
-    ulEl.appendChild(liElement);
-    liEl.textContent = this.likes[i];
+    
+    
     }
 
 
-}
-}
 
 
-
-
-
-    Seattle.updatingNumberOfCustomersPerHour();
-    Seattle.updatingNumberOfCookiesPerHour();
-    Seattle.render();
-
-
-
-
-
-
-console.log(numberOfCustomersPerHour)
+Paris.updatingNumberOfCustomersPerHour();
+Paris.updateNumberOfCookiesPerHour();
+Paris.render();
 
 
 
@@ -70,129 +267,68 @@ console.log(numberOfCustomersPerHour)
 
 
 
+const Lima = {
+    cityName: "Lima",   
+    maxNo: 16,
+    minNo: 2,
+    avgNo: 4.6,
+    numberOfCookiesPerHour: [],
+    numberOfCustomersPerHour: [],
+    total: 0,
+    updatingNumberOfCustomersPerHour: function(){
+    
+        for(let i = 0; i< hours.length;i++){
+       
+            this.numberOfCustomersPerHour.push(randomValue(this.minNo,this.maxNo));
+            console.log(this.numberOfCustomersPerHour)
+    }
+    
+    },
+    
+    
+    
+    updateNumberOfCookiesPerHour: function(){
+        for(let i = 0 ; i < hours.length; i++){
+             this.numberOfCookiesPerHour.push(this.numberOfCustomersPerHour[i] * Math.ceil(this.avgNo));
+             console.log(this.numberOfCookiesPerHour)
+            this.total = this.total + this.numberOfCookiesPerHour[i];
+          
+                }
+    },
+    
+    render: function(){
+        let cityName= document.createElement('h2');
+        globalVar.appendChild(cityName);
+        cityName.textContent = this.cityName;
+    
+    
+        let containingList= document.createElement('ul');
+        globalVar.appendChild(containingList);
+    
+        for(let i = 0; i<hours.length; i++){
+            let elementList = document.createElement('li');
+            containingList.appendChild(elementList);
+            elementList.textContent= `${hours[i]}       :      ${this.numberOfCookiesPerHour[i]} cookies`
+        }
+    
+        let totalPerDay = document.createElement('li');
+        containingList.appendChild(totalPerDay);
+        totalPerDay.textContent = `Daily Total :  ${this.total}`;
+    
+    
+    
+    }
+    
+    
+    }
 
 
 
 
+Lima.updatingNumberOfCustomersPerHour();
+Lima.updateNumberOfCookiesPerHour();
+Lima.render();
 
 
 
-
-
-
-// let globVar = document.getElementById('kittenProfiles');
-// // console.log(globVar);
-// // its always better to use the container as a global variable!
-// const frankie = {
-//     kittenName:'frankie',
-//     likes:['jumping','napping','eating','zzz'],
-//     age:0, // initial value of zero
-//     arr: [],
-//     goodWithKids:true,
-//     goodWithDogs:false,
-//     goodWithOtherCats:false,
-//     updatingTheAge:function(){
-//         // in order to have a randomValue between two numbers
-//         this.age = randomValue(3,12);
-//         console.log(this.age);
-//     }},
-// //     render:function(){
-// //         let articleEl = document.createElement('article');
-//         // console.log(globVar);
-//         //create
-//         //append 
-//         globVar.appendChild(articleEl);
-//         // give it a textcontent if needed
-
-//         let h2El = document.createElement('h2');
-//         articleEl.appendChild(h2El);
-//         h2El.textContent = this.kittenName;
-
-//         let paragraphEl = document.createElement('p');
-//         articleEl.appendChild(paragraphEl);
-//         paragraphEl.textContent = `${this.kittenName} is a cute cat and it has ${this.age} years old`;
-
-//         let ulEl = document.createElement('ul');
-//         articleEl.appendChild(ulEl);
-//         let liEl = null;
-//         for(let i = 0 ; i < this.likes.length ; i++){
-//         liEl = document.createElement('li');
-//         ulEl.appendChild(liEl);
-        
-//         liEl.textContent = this.likes[i];
-//         }
-        
-//         let imgEl = document.createElement('img');
-//         articleEl.appendChild(imgEl);
-
-//         imgEl.setAttribute('src',`images/${this.kittenName}.jpeg`)   
-
-
-//         // let prev = document.createElement('h4');
-//         // articleEl.appendChild(prev);
-//         // prev.textContent = 'IsGoodWithDogs'
-//         // let newBool = document.createElement('h5');
-//         // articleEl.appendChild(newBool);
-//         // newBool.textContent = this.goodWithDogs;
-
-//     }
-// };
-
-// // using this out side its not possible at this moment
-// frankie.updatingTheAge();
-// frankie.render();
-
-
-
-
-
-// const sereena = {
-//     kittenName:'serena',
-//     likes:['jumping','zzz'],
-//     age:0, // initial value of zero
-//     arr: [],
-//     goodWithKids:false,
-//     goodWithDogs:true,
-//     goodWithOtherCats:false,
-//     updatingTheAge:function(){
-//         // in order to have a randomValue between two numbers
-//         this.age = randomValue(3,12);
-//         console.log(this.age);
-//     },
-//     render:function(){
-//         let articleEl = document.createElement('article');
-//         // console.log(globVar);
-//         //create
-//         //append 
-//         globVar.appendChild(articleEl);
-//         // give it a textcontent if needed
-
-//         let h2El = document.createElement('h2');
-//         articleEl.appendChild(h2El);
-//         h2El.textContent = this.kittenName;
-
-//         let paragraphEl = document.createElement('p');
-//         articleEl.appendChild(paragraphEl);
-//         paragraphEl.textContent = `${this.kittenName} is a cute cat and it has ${this.age} years old`;
-
-//         let ulEl = document.createElement('ul');
-//         articleEl.appendChild(ulEl);
-//         let liEl = null;
-//         for(let i = 0 ; i < this.likes.length ; i++){
-//         liEl = document.createElement('li');
-//         ulEl.appendChild(liEl);
-//         liEl.textContent = this.likes[i];
-//         }
-        
-//         let imgEl = document.createElement('img');
-//         articleEl.appendChild(imgEl);
-
-//         imgEl.setAttribute('src',`images/${this.kittenName}.jpeg`)   
-
-//     }
-// };
-
-// // using this out side its not possible at this moment
-// sereena.updatingTheAge();
-// sereena.render();
 
