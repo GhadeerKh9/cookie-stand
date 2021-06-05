@@ -1,27 +1,70 @@
-.Seattle {
-    background-color: blanchedalmond;
+ header nav ul li {
+      display: inline-block;
+      
+  
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+ }
+  
+  li:hover, li:active {
+    background-color: green;
+    color: white;
+  }
+
+/* .fixed{ */ 
+      /* position: fixed;
+      width: 100%;
+      position: fixed;        
+      background: white;
+      padding: 10px 0;
+      color: black;
+      height: 30mm;
+      display: flex;
+    justify-content: space-between;
+    padding: 0em 3.15em;
+    background: linear-gradient(to bottom, rgb(241, 243, 240) 50%, rgb(31, 212, 7) 50%); */
+    /* background: linear-gradient(to bottom, rgb(241, 243, 240) 50%, rgb(31, 212, 7) 50%); */
+    /* position: fixed; */
+    /* height: 45mm;
+  } */
+
+  /* footer{
+    background: linear-gradient(to bottom, rgb(241, 243, 240) 50%, rgb(31, 212, 7) 50%);
+    /* position: fixed; */
+    /* height: 45mm;
+  }  */ 
+  /* body {
+      /* height: 600mm; */
+      /* background-color: white;
+  } */ 
+
+  /* table{
+    border-collapse: collapse;
 }
-.Tokyo{
-    background-color: salmon
-}
-.Dubai {
-    background-color: rgb(212, 238, 223);
-}
-.Lima{
-    background-color: rgb(185, 178, 224);
+td, th{
+    border:solid black 1px;
 }
 
-.Paris {
-    background: rgb(94, 87, 86);
-}
-header {
-    background-color: thistle;
-    padding:  20px;
-}
-.inline {
-    display: inline-block;
+td{
+    color: brown;
+}  */
+
+
+.coloumn {
+    column-count: 5;
 }
 footer{
-    padding: 20px;
-    background-color: thistle;
+  background-color:rgb(7, 241, 108);
+  padding-bottom: 20px;
+}
+header {
+  background-color: rgb(7, 241, 108);
+}
+
+.fixed {
+  background-color: rgb(7, 241, 108);
 }
