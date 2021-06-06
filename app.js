@@ -228,4 +228,13 @@ newLocation.render();
 
 
 
+
+
+
 }
+
+// tableOne.removeChild(tableOne.lastChild);
+// newLocation.numberOfCustomersPerHour();
+// newLocation.numberOfCookiesPerHour();
+// footer();
+// document.getElementById('LocationsForm').reset();
