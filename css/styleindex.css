@@ -1,70 +1,85 @@
+ 
+ body {
+   background-color: rgb(192, 192, 192);
+ }
+ 
  header nav ul li {
       display: inline-block;
+     
       
   
-    background-color: white;
-    color: black;
-    border: 2px solid green;
+    background-color: rgb(177, 154, 154);
+    
+    border: 2px solid rgb(177, 154, 154);
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
+    margin: 20px;
+    
+    
  }
   
   li:hover, li:active {
-    background-color: green;
-    color: white;
+    background-color: white;
+    color: rgb(199, 98, 153);
   }
 
-/* .fixed{ */ 
-      /* position: fixed;
+.fixed{
       width: 100%;
       position: fixed;        
-      background: white;
-      padding: 10px 0;
-      color: black;
-      height: 30mm;
-      display: flex;
-    justify-content: space-between;
-    padding: 0em 3.15em;
-    background: linear-gradient(to bottom, rgb(241, 243, 240) 50%, rgb(31, 212, 7) 50%); */
-    /* background: linear-gradient(to bottom, rgb(241, 243, 240) 50%, rgb(31, 212, 7) 50%); */
-    /* position: fixed; */
-    /* height: 45mm;
-  } */
+    
+    
+  
+     height: 30mm;
+  }
 
-  /* footer{
-    background: linear-gradient(to bottom, rgb(241, 243, 240) 50%, rgb(31, 212, 7) 50%);
-    /* position: fixed; */
-    /* height: 45mm;
-  }  */ 
-  /* body {
-      /* height: 600mm; */
-      /* background-color: white;
-  } */ 
-
-  /* table{
-    border-collapse: collapse;
-}
-td, th{
-    border:solid black 1px;
-}
-
-td{
-    color: brown;
-}  */
-
+  
 
 .coloumn {
     column-count: 5;
 }
-footer{
-  background-color:rgb(7, 241, 108);
-  padding-bottom: 20px;
+
+
+
+
+table{
+  
+ font-family: Arial, Helvetica, sans-serif;
+ width: 70%;
+ border: 1px solid rgb(177, 154, 154);
+
+ margin-left: auto;
+  margin-right: auto;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
-header {
-  background-color: rgb(7, 241, 108);
+td, th{
+
+  color: rgb(199, 98, 153);
+} */
+
+td{
+ 
+
+  text-align: center;
+} 
+
+
+
+
+
+footer{
+  background-color: white;
+  padding-bottom: 20px;
+
+   justify-content: space-between;
+    padding: 0em 3.15em;
+   
+
+
+
 }
 
-.fixed {
-  background-color: rgb(7, 241, 108);
-}
+
+
+
