@@ -205,3 +205,36 @@ let time = new Header();
 
 // console.log(arrOfObject);
 footer();
+
+const citiesForm = document.getElementById('LocationsForm');
+citiesForm.addEventListener('submit', inputFunction);
+
+function inputFunction(event){
+
+event.preventDefault();
+
+
+let citiesName = event.target.branchName.value;
+let maxValue = event.target.maxNumber.value;
+let minValue = event.target.minNumber.value;
+let avgValue = event.target.avgNumber.value;
+
+
+let newLocation = new Location(citiesName,maxValue,minValue,avgValue);
+
+newLocation.updateNumberOfCustomersPerHour();
+newLocation.updateNumberOfCookiesPerHour();
+newLocation.render();
+
+
+
+
+
+
+}
+
+// tableOne.removeChild(tableOne.lastChild);
+// newLocation.numberOfCustomersPerHour();
+// newLocation.numberOfCookiesPerHour();
+// footer();
+// document.getElementById('LocationsForm').reset();
